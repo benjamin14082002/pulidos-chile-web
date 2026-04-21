@@ -1,0 +1,13 @@
+/* Configuraciones globales personalizadas */
+
+/* Desplazamiento suave para toda la página al hacer clic en los enlaces del menú */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Aquí podrás agregar tu CSS personalizado más adelante. 
+Por ejemplo, si alguna vez quieres sobrescribir Tailwind:
+.mi-boton-especial {
+    background-color: #ff0000;
+}
+*/
