@@ -11,3 +11,7 @@ Por ejemplo, si alguna vez quieres sobrescribir Tailwind:
     background-color: #ff0000;
 }
 */
+
+img{
+    width: 25px;
+}
