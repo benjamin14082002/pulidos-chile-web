@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    // --- 0. INICIALIZAR ANIMACIONES AL SCROLL (AOS) ---
+    AOS.init({
+        once: true,       // La animación solo ocurre la primera vez que bajas
+        offset: 100,      // Empieza la animación 100px antes de llegar al elemento
+        duration: 800,    // Duración de la animación (0.8 segundos)
+        easing: 'ease-out-cubic'
+    });
+
     // --- 1. FUNCIÓN REUTILIZABLE PARA CARRUSELES ---
     const setupCarousel = (carouselId, prevBtnId, nextBtnId) => {
         const carousel = document.getElementById(carouselId);
@@ -8,9 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (carousel && btnPrev && btnNext) {
             const getScrollAmount = () => {
-                // Calcula el ancho de una tarjeta + el espacio (gap) en Tailwind
                 const cardWidth = carousel.querySelector('div').offsetWidth;
-                const gap = 32; // 2rem (gap-8 equivale a 32px en Tailwind)
+                const gap = 32; 
                 return cardWidth + gap;
             };
 
@@ -24,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Inicializamos ambos carruseles
     setupCarousel('services-carousel', 'btn-prev-servicios', 'btn-next-servicios');
     setupCarousel('obras-carousel', 'btn-prev-obras', 'btn-next-obras');
 
